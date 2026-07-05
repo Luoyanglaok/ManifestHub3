@@ -11,6 +11,8 @@
 · 💬 [Discord](https://discord.com/invite/FDKpJu5zgT)
 · 📝 [Blog](https://steamtools.games/blog)
 
+
+[![Website](https://img.shields.io/badge/Website-steamtools.games-0b1220?style=for-the-badge)](https://steamtools.games/) [![API](https://img.shields.io/badge/API-Public%20%26%20Free-22c55e?style=for-the-badge)](https://steamtools.games/developers) [![Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/FDKpJu5zgT) [![License](https://img.shields.io/badge/License-MIT-3b82f6?style=for-the-badge)](LICENSE)
 </div>
 
 ---

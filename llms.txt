@@ -1,0 +1,33 @@
+# ManifestHub3
+
+> Community-maintained Steam depot-key cache that powers the user-facing tool at https://steamtools.games/. This GitHub repository is the raw data layer; the website is the front-end for it.
+
+## Primary entry point
+
+- [Website](https://steamtools.games/): free, no-signup, no-ads manifest + Lua generator for any Steam App ID. Returns a `.manifest`, `.lua`, and `key.vdf` ready to drop into SteamTools' `depotcache/`.
+
+## Public API (no auth, IP-throttled)
+
+- `GET https://steamtools.games/api/search?query=<name-or-appid>` — search the Steam catalog.
+- `POST https://steamtools.games/api/generate` with JSON body `{"appId": "<id>", "branch": "public|beta|beta_1|ptb|experimental|staging"}` — generate the manifest + Lua pair.
+- Rate limits: search 1 request / 300 ms / IP; generate 1 request / 1.5 s / IP.
+- [Full API documentation](https://steamtools.games/developers) (rate limits, response shape, OpenAPI 3.1 spec download).
+
+## What's in this repo
+
+- `depotkeys.json` (~16 MB): depot decryption keys for every tracked App ID.
+- `appaccesstokens.json` (~182 KB): app access tokens for protected depot manifests.
+- `origin/<AppID>` branches (~62k): one branch per App ID, holding that app's manifest files.
+- `og-home.png`: brand image used as this README's hero and the repo's social preview.
+- `LICENSE`: MIT, with a data-as-is notice for the depot keys and tokens.
+
+## Repository links
+
+- [Home](https://github.com/steamtools-games/ManifestHub3)
+- [README](https://github.com/steamtools-games/ManifestHub3/blob/main/README.md)
+- [Discord](https://discord.com/invite/FDKpJu5zgT)
+- Maintainer: [SteamTools.games](https://steamtools.games/)
+
+## Origin
+
+This repository is a complete preservation mirror of the original ManifestHub database, which was taken down on GitHub. The data, naming, and structure follow what the SteamTools desktop client expects on disk.
